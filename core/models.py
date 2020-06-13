@@ -2,6 +2,7 @@ from django.db import models
 from attractions.models import Attraction
 from comments.models import Comment
 from reviews.models import Review
+from addresses.models import Address
 
 # Create your models here.
 class TouristSpot(models.Model):
@@ -11,6 +12,7 @@ class TouristSpot(models.Model):
     attractions = models.ManyToManyField(Attraction)
     comments = models.ManyToManyField(Comment)
     reviews = models.ManyToManyField(Review)
+    address = models.ForeignKey(Address, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
