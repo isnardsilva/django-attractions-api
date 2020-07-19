@@ -14,3 +14,6 @@ class TouristSpotViewSet(ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         return Response({'teste': 123})
+
+    def create(self, request, *args, **kwargs):
+        return Response({'Hello': request.data['name']})
