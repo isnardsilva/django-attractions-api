@@ -17,3 +17,6 @@ class TouristSpotViewSet(ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         return Response({'Hello': request.data['name']})
+
+    def destroy(self, request, *args, **kwargs):
+        pass
