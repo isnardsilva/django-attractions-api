@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'core',
     'attractions',
     'comments',
@@ -130,3 +131,7 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = 'images'
 
 MEDIA_URL = '/images/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
