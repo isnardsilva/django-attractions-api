@@ -12,5 +12,5 @@ class TouristSpotViewSet(ModelViewSet):
     def get_queryset(self):
         return TouristSpot.objects.filter(okay=True)
 
-    # def list(self, request, *args, **kwargs):
-    #     return Response({'teste': 123})
+    def list(self, request, *args, **kwargs):
+        return Response({'teste': 123})
