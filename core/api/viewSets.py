@@ -17,31 +17,31 @@ class TouristSpotViewSet(ModelViewSet):
         return TouristSpot.objects.filter(okay=True)
 
     # Executado na exibicao da lista de resultados
-    # def list(self, request, *args, **kwargs):
-    #     return Response({'teste': 123})
+    def list(self, request, *args, **kwargs):
+        return super(TouristSpotViewSet, self).list(request, *args, **kwargs)
 
     # Executando quando um recurso vai ser criado
-    # def create(self, request, *args, **kwargs):
-    #     return Response({'Hello': request.data['name']})
+    def create(self, request, *args, **kwargs):
+        return super(TouristSpotViewSet, self).create(request, *args, **kwargs)
 
     # Executado quando um recurso vai ser deletado
-    # def destroy(self, request, *args, **kwargs):
-    #     pass
+    def destroy(self, request, *args, **kwargs):
+        return super(TouristSpotViewSet, self).destroy(request, *args, **kwargs)
 
     # Executado, assim como o LIST, quando o usuario pede para ver os
     # dados dos recursos, mas esse metodo e executado quando
     # quando eu quero obter um recurso em especifico e nao
     # a lista de todos os recursos presentes no banco
-    # def retrieve(self, request, *args, **kwargs):
-    #     pass
+    def retrieve(self, request, *args, **kwargs):
+        return super(TouristSpotViewSet, self).retrieve(request, *args, **kwargs)
 
     # Executado quando um recurso vai ser atualizado por inteiro (PUT)
-    # def update(self, request, *args, **kwargs):
-    #     pass
+    def update(self, request, *args, **kwargs):
+        return super(TouristSpotViewSet, self).update(request, *args, **kwargs)
 
     # Executado quando apenas parte de um recurso vai ser atualizado (PATCH)
-    # def partial_update(self, request, *args, **kwargs):
-    #     pass
+    def partial_update(self, request, *args, **kwargs):
+        return super(TouristSpotViewSet, self).par(request, *args, **kwargs)
 
 
     # CUSTOM ACTIONS
