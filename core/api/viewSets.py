@@ -1,3 +1,4 @@
+from rest_framework import filters
 from rest_framework.viewsets import ModelViewSet
 from core.models import TouristSpot
 from .serializers import TouristSpotSerializer
@@ -9,6 +10,8 @@ class TouristSpotViewSet(ModelViewSet):
     API endpoint that allows users to be viewed or edited.
     """
     serializer_class = TouristSpotSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['name', 'description', 'address__line1']
 
     # ACTIONS
 
