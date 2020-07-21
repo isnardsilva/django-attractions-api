@@ -4,6 +4,8 @@ from core.models import TouristSpot
 from .serializers import TouristSpotSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAdminUser
+from rest_framework.authentication import TokenAuthentication
 
 class TouristSpotViewSet(ModelViewSet):
     """
@@ -11,6 +13,8 @@ class TouristSpotViewSet(ModelViewSet):
     """
     serializer_class = TouristSpotSerializer
     filter_backends = [filters.SearchFilter]
+    permission_classes = [IsAdminUser,]
+    authentication_classes = [TokenAuthentication,]
     search_fields = ['name', 'description', 'address__line1']
 
     # ACTIONS
