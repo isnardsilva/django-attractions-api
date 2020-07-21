@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'django_filters',
     'core',
     'attractions',
@@ -132,6 +133,6 @@ MEDIA_ROOT = 'images'
 
 MEDIA_URL = '/images/'
 
-REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+# }
